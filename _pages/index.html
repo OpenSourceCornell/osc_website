@@ -1,0 +1,124 @@
+---
+permalink: /
+---
+
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en'}}">
+    <head>
+        <meta charset="utf-8">
+        <title>{% if page.title %}{{ page.title | escape }}: {% else %}{% endif %}{{ site.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+        <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+        <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+    </head>
+
+    <body>
+        <main>
+            <section class="home-intro">
+                <div class="wrapper">
+                    <p class="tagline">Share. Reuse. Innovate. Learn. <em>Have fun.</em></p>
+                    <header>
+                        <a href=""><span>open</span><span>source</span><span>cornell</span></a>
+                    </header>
+
+                    <section class="home-intro-body">
+                        <p>
+                            OpenSourceCornell is an organization for anyone in
+                            the Ithaca area interested in Free and Open Source
+                            software. We have weekly meetings, talks, and
+                            Linux Installfests every semester.
+                        </p>
+
+                        <nav>
+                            <ul>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Projects</a></li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div>
+            </section>
+
+            <section class="who-are-we">
+                <div class="wrapper">
+                    <h2>Who Are We?</h2>
+
+                    <p>
+                        Pellentesque habitant morbi tristique senectus
+                        et netus et malesuada fames ac turpis
+                        egestas. Vestibulum tortor quam, feugiat
+                        vitae, ultricies eget, tempor sit amet,
+                        ante. Donec eu libero sit amet quam egestas
+                        semper. Aenean ultricies mi vitae est. Mauris
+                        placerat eleifend leo. Quisque sit amet est et
+                        sapien ullamcorper pharetra. Vestibulum erat
+                        wisi, condimentum sed, commodo vitae, ornare
+                        sit amet, wisi. Aenean fermentum, elit eget
+                        tincidunt condimentum, eros ipsum rutrum orci,
+                        sagittis tempus lacus enim ac dui. Donec non
+                        enim in turpis pulvinar facilisis. Ut
+                        felis. Praesent dapibus, neque id cursus
+                        faucibus, tortor neque egestas augue, eu
+                        vulputate magna eros eu erat. Aliquam erat
+                        volutpat. Nam dui mi, tincidunt quis, accumsan
+                        porttitor, facilisis luctus, metus
+                    </p>
+                    <p>
+                        Pellentesque habitant morbi tristique senectus
+                        et netus et malesuada fames ac turpis
+                        egestas. Vestibulum tortor quam, feugiat
+                        vitae, ultricies eget, tempor sit amet,
+                        ante. Donec eu libero sit amet quam egestas
+                        semper. Aenean ultricies mi vitae est. Mauris
+                        placerat eleifend leo. Quisque sit amet est et
+                        sapien ullamcorper pharetra. Vestibulum erat
+                        wisi, condimentum sed, commodo vitae, ornare
+                        sit amet, wisi. Aenean fermentum, elit eget
+                        tincidunt condimentum, eros ipsum rutrum orci,
+                        sagittis tempus lacus enim ac dui. Donec non
+                        enim in turpis pulvinar facilisis. Ut
+                        felis. Praesent dapibus, neque id cursus
+                        faucibus, tortor neque egestas augue, eu
+                        vulputate magna eros eu erat. Aliquam erat
+                        volutpat. Nam dui mi, tincidunt quis, accumsan
+                        porttitor, facilisis luctus, metus
+                    </p>
+                </div>
+            </section>
+
+            <section class="news" aria-labeledby="news">
+                <div class="wrapper">
+                    <h2 id="news">Club Updates &amp; Events</h2>
+                    <ul>
+                        {% for post in site.posts %}
+                        <li>
+                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time>
+                            <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="h-card">
+            <div class="wrapper">
+                <section class="footer-column about">
+                    <span class="p-name">OpenSourceCornell</span>
+                </section>
+                <section class="footer-column links">
+                    <ul>
+                        <li><a class="u-url" href="{{ site.url }}{{ site.baseurl }}">{{ site.url }}{{ site.baseurl }}</a></li>
+                        <li><a href="https://github.com/OpenSourceCornell">github.com/OpenSourceCornell</a></li>
+                    </ul>
+                </section>
+                <section class="footer-column copyright">
+                    <p>Copyright &copy; 2017 OpenSourceCornell</p>
+                </section>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -28,6 +28,8 @@ github_username:  OpenSourceCornell
 markdown: kramdown
 gems:
   - jekyll-feed
+include:
+  - _pages
 exclude:
   - Gemfile
   - Gemfile.lock

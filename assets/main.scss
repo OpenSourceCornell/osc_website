@@ -1,0 +1,120 @@
+---
+---
+
+@charset "utf-8";
+
+/*******************************************************************************
+* BASIC CONSTANTS
+*
+* Typography: http://practicaltypography.com/
+* Colors: https://brand.cornell.edu/web_color.php
+*******************************************************************************/
+
+$base-font-family: Helvetica, sans-serif;
+$base-line-height: 1.2;
+
+$content-width: 60em;
+
+$accent-color: #b31b1b;
+$muted-color: #222222;
+
+/*******************************************************************************
+* GENERAL STYLES
+*******************************************************************************/
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    background-color: #FDFDFD;
+    color: #111;
+
+    font-family: $base-font-family;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+
+    max-width: $content-width;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+/*******************************************************************************
+* HEADER
+*******************************************************************************/
+
+body > header {
+    background-color: $accent-color;
+    color: #FFF;
+
+    a:link, a:visited, a:active {
+        color: #FFF;
+
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    h1 {
+        margin: 0;
+        flex: 1 0 30%;
+
+        font-weight: normal;
+        line-height: 4rem;
+    }
+
+    nav {
+        flex: 0 1 auto;
+
+        line-height: 4rem;
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            list-style-type: none;
+        }
+    }
+}
+
+/*******************************************************************************
+* CONTENT
+*******************************************************************************/
+
+/*******************************************************************************
+* FOOTER
+*******************************************************************************/
+
+body > footer {
+    padding: 2rem 0;
+
+    background-color: $muted-color;
+    color: #FDFDFD;
+
+    a:link, a:visited, a:active {
+        color: #FDFDFD;
+    }
+
+    .footer-column {
+        flex: 1 0 15rem;
+    }
+
+    .about {
+        width: 30%;
+    }
+
+    .links {
+        width: 30%;
+    }
+
+    .copyright {
+        width: 30%;
+    }
+}

@@ -94,10 +94,17 @@ permalink: /
                 <div class="wrapper">
                     <h2 id="events">Events</h2>
                     <ul>
-                        {% for post in site.posts %}
-                        <li>
-                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time>
-                            <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+                        {% for post in site.events %}
+                        <li class="h-event">
+                            <h3 class="p-name"><a class="u-url" href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a></h3>
+                            <time class="dt-start" datetime="{{ post.start_time | date_to_xmlschema }}">
+                                {{ post.start_time | date: "%B %-d, %Y %l:%M %p %Z" }}
+                            </time>
+                            to
+                            <time class="dt-end" datetime="{{ post.end_time | date_to_xmlschema }}">
+                                {{ post.end_time | date: "%l:%M %p %Z" }}
+                            </time>
+                            <p><span class="p-location">{{ post.location }}</span></p>
                         </li>
                         {% endfor %}
                     </ul>

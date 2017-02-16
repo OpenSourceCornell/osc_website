@@ -1,124 +1,169 @@
 ---
+layout: base
 permalink: /
 ---
+<main>
+    <section class="home-intro">
+        <div class="wrapper">
+            <p class="tagline">Share. Reuse. Innovate. Learn. <em>Have fun.</em></p>
+            <header>
+                <a href="{{ site.baseurl }}"><img src="{{ "/assets/logo.svg" | relative_url }}" alt="OpenSourceCornell"></a>
+            </header>
 
-<!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en'}}">
-    <head>
-        <meta charset="utf-8">
-        <title>{% if page.title %}{{ page.title | escape }}: {% else %}{% endif %}{{ site.title }}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <section class="home-intro-body">
+                <p>
+                    OpenSourceCornell is an organization for anyone in the
+                    Ithaca area interested in Free and Open Source
+                    software. We have weekly meetings, talks, and Linux
+                    Installfests every semester.
+                </p>
 
-        <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-        <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
-        <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-    </head>
-
-    <body>
-        <main>
-            <section class="home-intro">
-                <div class="wrapper">
-                    <p class="tagline">Share. Reuse. Innovate. Learn. <em>Have fun.</em></p>
-                    <header>
-                        <a href=""><span>open</span><span>source</span><span>cornell</span></a>
-                    </header>
-
-                    <section class="home-intro-body">
-                        <p>
-                            OpenSourceCornell is an organization for anyone in
-                            the Ithaca area interested in Free and Open Source
-                            software. We have weekly meetings, talks, and
-                            Linux Installfests every semester.
-                        </p>
-
-                        <nav>
-                            <ul>
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Projects</a></li>
-                            </ul>
-                        </nav>
-                    </section>
-                </div>
-            </section>
-
-            <section class="who-are-we">
-                <div class="wrapper">
-                    <h2>Who Are We?</h2>
-
-                    <p>
-                        Pellentesque habitant morbi tristique senectus
-                        et netus et malesuada fames ac turpis
-                        egestas. Vestibulum tortor quam, feugiat
-                        vitae, ultricies eget, tempor sit amet,
-                        ante. Donec eu libero sit amet quam egestas
-                        semper. Aenean ultricies mi vitae est. Mauris
-                        placerat eleifend leo. Quisque sit amet est et
-                        sapien ullamcorper pharetra. Vestibulum erat
-                        wisi, condimentum sed, commodo vitae, ornare
-                        sit amet, wisi. Aenean fermentum, elit eget
-                        tincidunt condimentum, eros ipsum rutrum orci,
-                        sagittis tempus lacus enim ac dui. Donec non
-                        enim in turpis pulvinar facilisis. Ut
-                        felis. Praesent dapibus, neque id cursus
-                        faucibus, tortor neque egestas augue, eu
-                        vulputate magna eros eu erat. Aliquam erat
-                        volutpat. Nam dui mi, tincidunt quis, accumsan
-                        porttitor, facilisis luctus, metus
-                    </p>
-                    <p>
-                        Pellentesque habitant morbi tristique senectus
-                        et netus et malesuada fames ac turpis
-                        egestas. Vestibulum tortor quam, feugiat
-                        vitae, ultricies eget, tempor sit amet,
-                        ante. Donec eu libero sit amet quam egestas
-                        semper. Aenean ultricies mi vitae est. Mauris
-                        placerat eleifend leo. Quisque sit amet est et
-                        sapien ullamcorper pharetra. Vestibulum erat
-                        wisi, condimentum sed, commodo vitae, ornare
-                        sit amet, wisi. Aenean fermentum, elit eget
-                        tincidunt condimentum, eros ipsum rutrum orci,
-                        sagittis tempus lacus enim ac dui. Donec non
-                        enim in turpis pulvinar facilisis. Ut
-                        felis. Praesent dapibus, neque id cursus
-                        faucibus, tortor neque egestas augue, eu
-                        vulputate magna eros eu erat. Aliquam erat
-                        volutpat. Nam dui mi, tincidunt quis, accumsan
-                        porttitor, facilisis luctus, metus
-                    </p>
-                </div>
-            </section>
-
-            <section class="news" aria-labeledby="news">
-                <div class="wrapper">
-                    <h2 id="news">Club Updates &amp; Events</h2>
+                <nav>
                     <ul>
-                        {% for post in site.posts %}
-                        <li>
-                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time>
-                            <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-                        </li>
-                        {% endfor %}
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#links">Projects</a></li>
                     </ul>
-                </div>
+                </nav>
             </section>
-        </main>
+        </div>
+    </section>
 
-        <footer class="h-card">
+    <section class="who-are-we" aria-labeledby="who-are-we">
+        <div class="wrapper">
+            <h2 id="who-are-we">Who Are We?</h2>
+
+            <p>
+                We are a club of Cornell undergraduate and graduate
+                students with an interest in learning about, using, and
+                promoting free and open source software. Started in the
+                spring of 2011, we've
+            </p>
+            <ul>
+                <li>
+                    held Linux Installfests to help people start using
+                    GNU/Linux,
+                </li>
+                <li>
+                    volunteered at open source workshops to show people
+                    how they can contribute,
+                </li>
+                <li>
+                    hosted Richard Stallman, Howard Hinnant, Red Hat, and
+                    others to give talks and share their viewpoints,
+                </li>
+                <li>
+                    run DevJams for people in the community to get
+                    together and hack on projects,
+                </li>
+                <li>
+                    held weekly meetings for anyone to discuss free
+                    software, free culture, or anything related,
+                </li>
+                <li>
+                    and more!
+                </li>
+            </ul>
+            <p>
+                We welcome anybody, regardless of major, background, or
+                identity, who is interested in learning more about free
+                and open source software and how they can use or
+                contribute to it.
+            </p>
+
+            <h3>What is Free and Open Source Software?</h3>
+
+            <p></p>
+        </div>
+    </section>
+
+    <div class="flex-wrapper">
+        <section class="events" aria-labeledby="events">
             <div class="wrapper">
-                <section class="footer-column about">
-                    <span class="p-name">OpenSourceCornell</span>
-                </section>
-                <section class="footer-column links">
-                    <ul>
-                        <li><a class="u-url" href="{{ site.url }}{{ site.baseurl }}">{{ site.url }}{{ site.baseurl }}</a></li>
-                        <li><a href="https://github.com/OpenSourceCornell">github.com/OpenSourceCornell</a></li>
-                    </ul>
-                </section>
-                <section class="footer-column copyright">
-                    <p>Copyright &copy; 2017 OpenSourceCornell</p>
-                </section>
+                <h2 id="events">Events</h2>
+                <ul>
+                    {% assign events = site.events | sort: 'date' | reverse %}
+                    {% for post in events limit: 2 %}
+                    <li class="h-event">
+                        <a class="p-name u-url" href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a>
+                        <p>
+                            <time class="dt-start" datetime="{{ post.start_time | date_to_xmlschema }}">
+                                {{ post.start_time | date: "%B %-d, %Y %l:%M %p %Z" }}
+                            </time>
+                            to
+                            <time class="dt-end" datetime="{{ post.end_time | date_to_xmlschema }}">
+                                {{ post.end_time | date: "%l:%M %p %Z" }}
+                            </time>
+                        </p>
+                        <p><span class="p-location">{{ post.location }}</span></p>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
-        </footer>
-    </body>
-</html>
+        </section>
+        <section class="links" aria-labeledby="links">
+            <div class="wrapper">
+                <h2 id="links">Projects &amp; Links</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/CornellCSWiki/CornellCSWiki">
+                            Cornell CS Wiki</a>
+
+                        <p>
+                            We help maintain this community resource,
+                            adding new content and reviewing contributions
+                            from the CS community at Cornell.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="https://github.com/OpenSourceCornell">
+                            github.com/OpenSourceCornell</a>
+
+                        <p>
+                            See our projects on Github. Feel free to open
+                            issues or pull requests!
+                        </p>
+                    </li>
+                    <li>
+                        <a href="https://kiwiirc.com/client/irc.freenode.net/#opensourcecornell">
+                            #opensourcecornell @ Freenode</a>
+
+                        <p>
+                            Join our IRC channel to chat with other
+                            members.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/OpenSourceCornell">
+                            facebook.com/OpenSourceCornell</a>
+
+                        <p>
+                            Follow us on Facebook to keep up with
+                            events. You can also join our
+                            <a href="https://www.facebook.com/groups/opensourcecornell">Facebook group</a>
+                            if you'd like a discussion area.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <section class="news" aria-labeledby="news">
+        <div class="wrapper">
+            <h2 id="news">News</h2>
+            <ul>
+                {% for post in site.posts %}
+                <li>
+                    <h3><a href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a></h3>
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date_to_long_string }}
+                    </time>
+
+                    {{ post.excerpt }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+</main>

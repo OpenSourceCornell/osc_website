@@ -1,0 +1,35 @@
+---
+---
+
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en'}}">
+    <head>
+        <meta charset="utf-8">
+        <title>{% if page.title %}{{ page.title }}&mdash;{% endif %}{{ site.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+        <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+        <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+    </head>
+
+    <body>
+        {{ content | indent: 8 }}
+
+        <footer class="h-card">
+            <div class="flex-wrapper">
+                <section class="footer-column about">
+                    <span class="p-name">OpenSourceCornell</span>
+                    <ul>
+                        <li><a class="u-url" href="{{ site.url }}{{ site.baseurl }}">{{ site.url }}{{ site.baseurl }}</a></li>
+                        <li><a href="https://github.com/OpenSourceCornell">github.com/OpenSourceCornell</a></li>
+                        <li><a href="https://facebook.com/OpenSourceCornell">facebook.com/OpenSourceCornell</a></li>
+                    </ul>
+                </section>
+                <section class="footer-column copyright">
+                    <p>Copyright &copy; 2017 OpenSourceCornell</p>
+                </section>
+            </div>
+        </footer>
+    </body>
+</html>

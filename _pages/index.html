@@ -1,19 +1,18 @@
 ---
 layout:    default
-title:     Home
 permalink: /
 ---
 
 <div class="wrapper">
-    <ul>
-        {% for post in site.posts %}
-        <li>
-            <span>{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-                <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-            </h2>
-        </li>
-        {% endfor %}
-    </ul>
+    <section aria-labelledby="news">
+        <h2 id="news">Club Updates</h2>
+        <ul>
+            {% for post in site.posts %}
+            <li>
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</time>
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
 </div>

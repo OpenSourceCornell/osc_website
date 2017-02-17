@@ -1,52 +1,13 @@
-<!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en'}}">
-<head>
-    <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title | escape }}: {% else %}{% endif %}{{ site.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: base
+---
 
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-</head>
+<header>
+    <div class="wrapper">
+        <a href="{{ site.baseurl | absolute_url }}"><img src="{{ "/assets/logo.svg" | relative_url }}" alt="OpenSourceCornell"></a>
+    </div>
+</header>
 
-<body>
-    <header>
-        <div class="wrapper">
-            <h1><a href=""><span>open</span><span>source</span><span>cornell</span></a></h1>
-
-            <nav>
-                <ul>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        {{ content | indent: 8 }}
-    </main>
-
-    <footer class="h-card">
-        <div class="wrapper">
-            <section class="footer-column about">
-                <span class="p-name">OpenSourceCornell</span>
-                <p>
-                    OpenSourceCornell is an organization for anyone in
-                    the Ithaca area interested in Free and Open Source
-                    software. We have weekly meetings, talks, and
-                    Linux Installfests every semester.
-                </p>
-            </section>
-            <section class="footer-column links">
-                <ul>
-                    <li><a class="u-url" href="{{ site.url }}{{ site.baseurl }}">{{ site.url }}{{ site.baseurl }}</a></li>
-                    <li><a href="https://github.com/OpenSourceCornell">github.com/OpenSourceCornell</a></li>
-                </ul>
-            </section>
-            <section class="footer-column copyright">
-                <p>Copyright &copy; 2017 OpenSourceCornell</p>
-            </section>
-        </div>
-    </footer>
-</body>
-</html>
+<main>
+    {{ content | indent: 4 }}
+</main>

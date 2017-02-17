@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+    <a href="{{ '/events' | relative_url }}">&lt; Back to All Events</a>
+
+    <section aria-labeledby="event" class="h-event">
+        <h2 id="event" class="p-name">
+            <a href="{{ page.url | absolute_url }}" class="u-url">{{ page.title }}</a>
+        </h2>
+
+        <dl>
+            <dt>Date and time</dt>
+            <dd>
+            <time class="dt-start" datetime="{{ page.start_time | date_to_xmlschema }}">
+                {{ page.start_time | date: "%B %-d, %Y %l:%M %p %Z" }}
+            </time>
+            to
+            <time class="dt-end" datetime="{{ page.end_time | date_to_xmlschema }}">
+                {{ page.end_time | date: "%l:%M %p %Z" }}
+            </time>
+            </dd>
+
+            <dt>Location</dt>
+            <dd class="p-location">{{ page.location }}</dd>
+
+            {% if page.external_url %}
+            <dt>External event URL</dt>
+            <dd><a href="{{ page.external_url }}">{{ page.external_url }}</a></dd>
+            {% endif %}
+        </dl>
+
+        {{ content | indent: 4 }}
+    </section>
+</div>

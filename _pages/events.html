@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: /events
+---
+<div class="wrapper">
+    <section class="events" aria-labeledby="events">
+        <h2 id="events">All Events</h2>
+        <ul>
+            {% assign events = site.events | sort: 'date' | reverse %}
+            {% for post in events %}
+            <li class="h-event">
+                <a class="p-name u-url" href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a>
+                <p>
+                    <time class="dt-start" datetime="{{ post.start_time | date_to_xmlschema }}">
+                        {{ post.start_time | date: "%B %-d, %Y %l:%M %p %Z" }}
+                    </time>
+                    to
+                    <time class="dt-end" datetime="{{ post.end_time | date_to_xmlschema }}">
+                        {{ post.end_time | date: "%l:%M %p %Z" }}
+                    </time>
+                </p>
+                <p><span class="p-location">{{ post.location }}</span></p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>

@@ -89,6 +89,15 @@ a:hover {
     color: $accent-color;
 }
 
+/* CSS lock: https://fvsch.com/code/css-locks */
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+    body {
+        font-size: calc(16px + 4 * (100vw - 1024px) / (1920 - 1024));
+    }
+}
+
+
 /*******************************************************************************
 * HEADER
 *******************************************************************************/

@@ -3,8 +3,18 @@ layout: base
 ---
 
 <header>
-    <div class="wrapper">
-        <a href="{{ site.baseurl | absolute_url }}"><img src="{{ "/assets/logo.svg" | relative_url }}" alt="OpenSourceCornell"></a>
+    <div class="flex-wrapper">
+        <a id="site-title" href="{{ site.baseurl | absolute_url }}">
+            <img src="{{ "/assets/logo.svg" | relative_url }}" alt="OpenSourceCornell">
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="{{ '/events' | relative_url }}">Events</a></li>
+                <li><a href="{{ '/#news' | relative_url }}">News</a></li>
+                <li><a href="{{ '/#links' | relative_url }}">Projects</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 

@@ -2,10 +2,32 @@
 layout: default
 ---
 
-<div class="wrapper">
-    <section aria-labeledby="post-title">
-        <h2 id="post-title">{{ page.title }}</h2>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="wrapper">
+        <header class="post-header">
+            <h2 class="post-title p-name" itemprop="name headline"><a href="{{site.url}}/{{site.baseurl}}/{{page.url}}" class="u-url">{{ page.title }}</a></h2>
 
-        {{ content | indent: 4 }}
-    </section>
-</div>
+            <p class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}" class="dt-published" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+                {% if page.author %}
+                • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    {% if page.author_url %}
+                    <span>
+                        <a href="{{ page.author_url }}" rel="author" itemprop="name" class="p-author h-card">{{ page.author }}</a>
+                    </span>
+                    {% else %}
+                    <span itemprop="name" class="p-author">
+                        {{ page.author }}
+                    </span>
+                    {% endif %}
+                </span>
+                {% else %}
+                {% endif %}
+            </p>
+        </header>
+
+        <section class="post-content e-content" itemprop="articleBody">
+            {{ content | indent: 12 }}
+        </section>
+    </div>
+</article>

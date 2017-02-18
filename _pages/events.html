@@ -10,7 +10,7 @@ title: "Events"
             {% assign events = site.events | sort: 'date' | reverse %}
             {% for post in events %}
             <li class="h-event">
-                <a class="p-name u-url" href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a>
+                <h3><a class="p-name u-url" href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a></h3>
                 <p>
                     <time class="dt-start" datetime="{{ post.start_time | date_to_xmlschema }}">
                         {{ post.start_time | date: "%B %-d, %Y %l:%M %p %Z" }}

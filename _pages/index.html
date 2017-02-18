@@ -154,12 +154,30 @@ permalink: /
         <div class="wrapper">
             <h2 id="news">News</h2>
             <ul>
-                {% for post in site.posts %}
-                <li>
-                    <h3><a href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a></h3>
-                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                {% for post in site.posts limit: 5 %}
+                <li class="h-entry">
+                    <h3 class="p-name">
+                        <a href="{{ post.url | absolute_url }}" class="u-url">
+                            {{ post.title | escape }}
+                        </a>
+                    </h3>
+                    <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">
                         {{ post.date | date_to_long_string }}
                     </time>
+                    {% if post.author %}
+                    • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        {% if post.author_url %}
+                        <span>
+                            <a href="{{ post.author_url }}" rel="author" itemprop="name" class="p-author h-card">{{ post.author }}</a>
+                        </span>
+                        {% else %}
+                        <span itemprop="name" class="p-author">
+                            {{ post.author }}
+                        </span>
+                        {% endif %}
+                    </span>
+                    {% endif %}
+
 
                     {{ post.excerpt }}
                 </li>

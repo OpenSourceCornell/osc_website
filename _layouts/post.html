@@ -5,7 +5,9 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
     <div class="wrapper">
         <header class="post-header">
-            <h2 class="post-title p-name" itemprop="name headline"><a href="{{site.url}}/{{site.baseurl}}/{{page.url}}" class="u-url">{{ page.title }}</a></h2>
+            <h2 class="post-title p-name" itemprop="name headline">
+                <a href="{{ page.url | absolute_url }}" class="u-url">{{ page.title | escape }}</a>
+            </h2>
 
             <p class="post-meta">
                 <time datetime="{{ page.date | date_to_xmlschema }}" class="dt-published" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>

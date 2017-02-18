@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="wrapper">
+<div class="wrapper">
+    <a href="{{ '/news' | relative_url }}">&lt; All News</a>
+
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
             <h2 class="post-title p-name" itemprop="name headline">
                 <a href="{{ page.url | absolute_url }}" class="u-url">{{ page.title | escape }}</a>
             </h2>
 
             <p class="post-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}" class="dt-published" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+                <time datetime="{{ page.date | date_to_xmlschema }}" class="dt-published" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>
                 {% if page.author %}
                 • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                     {% if page.author_url %}
@@ -31,5 +33,5 @@ layout: default
         <section class="post-content e-content" itemprop="articleBody">
             {{ content | indent: 12 }}
         </section>
-    </div>
-</article>
+    </article>
+</div>

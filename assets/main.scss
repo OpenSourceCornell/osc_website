@@ -105,7 +105,7 @@ a:hover {
 $header-height: 2.5rem;
 
 body > header {
-    padding: 1rem;
+    padding: 0.5rem;
 
     background-color: $accent-color;
 
@@ -125,11 +125,16 @@ body > header {
     }
 
     #site-title {
-        flex: 3 0 20rem;
+        flex: 1 0 15rem;
+    }
+
+    .flex-wrapper {
+        justify-content: space-between;
     }
 
     nav {
-        flex: 1 0 20rem;
+        flex: 1 0 15rem;
+        max-width: 30rem;
 
         ul {
             display: flex;

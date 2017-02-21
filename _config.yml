@@ -24,10 +24,19 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: OpenCornell
 github_username:  OpenSourceCornell
 
+collections:
+  events:
+    output: true
+    permalink: /event/:year/:month/:day/:title:output_ext
+
+permalink: /:year/:month/:title.html
+
 # Build settings
 markdown: kramdown
 gems:
   - jekyll-feed
+include:
+  - _pages
 exclude:
   - Gemfile
   - Gemfile.lock

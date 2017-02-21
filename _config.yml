@@ -27,7 +27,9 @@ github_username:  OpenSourceCornell
 collections:
   events:
     output: true
-    permalink: /event/:path:output_ext
+    permalink: /event/:year/:month/:day/:title:output_ext
+
+permalink: /:year/:month/:title.html
 
 # Build settings
 markdown: kramdown

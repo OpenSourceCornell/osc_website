@@ -89,6 +89,18 @@ a:hover {
     color: $accent-color;
 }
 
+blockquote {
+    margin: 0 3em;
+
+    p {
+        font-style: italic;
+    }
+
+    footer {
+        text-align: right;
+    }
+}
+
 /* CSS lock: https://fvsch.com/code/css-locks */
 
 @media screen and (min-width: 1024px) and (max-width: 1920px) {
@@ -257,6 +269,10 @@ section {
     h2 {
         color: $accent-color;
         border-bottom-color: $muted-foreground-color;
+    }
+
+    a:link, a:active, a:visited {
+        color: $accent-color;
     }
 }
 

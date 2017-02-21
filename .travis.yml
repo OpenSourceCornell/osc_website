@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.4.0
+
+script:
+  - scripts/ci_test.sh
+
+# Use container-based infrastructure for faster builds
+sudo: false

@@ -202,6 +202,7 @@ section {
 
             width: 90vw;
             max-width: 80vh;
+            min-width: 15rem;
         }
     }
 
@@ -231,6 +232,7 @@ section {
     @media #{$mobile} {
         background-size: 70vh;
         height: 80vh;
+        min-height: 15rem;
     }
 
     @media #{$mobile} and (orientation:landscape), #{$desktop} {

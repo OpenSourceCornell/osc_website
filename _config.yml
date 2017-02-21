@@ -40,3 +40,4 @@ include:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - scripts/

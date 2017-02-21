@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+    <a href="{{ '/news' | relative_url }}">&lt; All News</a>
+
+    <article class="post h-entry">
+        <header class="post-header">
+            <h2 class="post-title p-name">
+                <a href="{{ page.url | absolute_url }}" class="u-url">{{ page.title | escape }}</a>
+            </h2>
+
+            <p class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}" class="dt-published">{{ page.date | date: "%B %-d, %Y" }}</time>
+                {% if page.author %}
+                •
+                {% if page.author_url %}
+                <a href="{{ page.author_url }}" rel="author" class="p-author h-card">
+                    {{ page.author }}
+                </a>
+                {% else %}
+                <span rel="author" class="p-author">
+                    {{ page.author }}
+                </span>
+                {% endif %}
+                {% endif %}
+            </p>
+        </header>
+
+        <section class="post-content e-content">
+            {{ content | indent: 12 }}
+        </section>
+    </article>
+</div>

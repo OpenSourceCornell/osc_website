@@ -29,6 +29,7 @@ collections:
     output: true
     permalink: /event/:year/:month/:day/:title:output_ext
 
+future: true
 permalink: /:year/:month/:title.html
 
 # Build settings

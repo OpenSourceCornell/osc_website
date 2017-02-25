@@ -101,6 +101,14 @@ blockquote {
     }
 }
 
+.footnotes {
+    margin-top: 4rem;
+
+    border-top: 1px solid #000;
+
+    font-size: 85%;
+}
+
 /* CSS lock: https://fvsch.com/code/css-locks */
 
 @media screen and (min-width: 1024px) and (max-width: 1920px) {

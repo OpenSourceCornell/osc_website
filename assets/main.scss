@@ -31,7 +31,7 @@ body {
     height: 100%;
     margin: 0;
 
-    background-color: #FBFBFB;
+    background-color: #FDFDFD;
     color: $muted-color;
 
     font-family: $base-font-family;
@@ -110,6 +110,14 @@ blockquote {
     font-size: 85%;
 }
 
+dt {
+    font-style: italic;
+}
+
+dt + dd {
+    margin-bottom: 0.4em;
+}
+
 /* CSS lock: https://fvsch.com/code/css-locks */
 
 @media screen and (min-width: 1024px) and (max-width: 1920px) {
@@ -183,9 +191,25 @@ section {
     h2 {
         width: 100%;
 
-        border-bottom: 1px solid #000;
+        border-bottom: 2px dotted $muted-color;
+    }
+}
 
-        text-align: right;
+article {
+    > header {
+        margin-bottom: 1.5rem;
+
+        h2 {
+            margin-bottom: 0.4rem;
+
+            font-size: 1.85rem;
+        }
+
+        .post-meta {
+            margin: 0;
+
+            font-size: 1rem;
+        }
     }
 }
 

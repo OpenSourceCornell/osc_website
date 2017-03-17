@@ -286,7 +286,9 @@ section {
 
 .events, .links {
     flex: 1 0 20rem;
+}
 
+.events, .links, .news {
     h3 {
         a {
             text-decoration: underline;

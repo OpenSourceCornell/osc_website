@@ -51,6 +51,7 @@ body {
 .flex-wrapper {
     display: flex;
     flex-flow: row wrap;
+    padding: 0 0.25rem;
 
     @media #{$desktop} {
         > section:first-child > .wrapper {

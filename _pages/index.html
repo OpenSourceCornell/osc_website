@@ -188,41 +188,43 @@ permalink: /
         </section>
     </div>
 
-    <section class="news" aria-labeledby="news">
-        <div class="wrapper">
-            <h2 id="news">News</h2>
-            <ul>
-                {% for post in site.posts limit: 5 %}
-                <li class="h-entry">
-                    <h3 class="p-name">
-                        <a href="{{ post.url | absolute_url }}" class="u-url">
-                            {{ post.title | escape }}
-                        </a>
-                    </h3>
-                    <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">
-                        {{ post.date | date: "%B %-d, %Y" }}
-                    </time>
-                    {% if post.author %}
-                    • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                        {% if post.author_url %}
-                        <span>
-                            <a href="{{ post.author_url }}" rel="author" itemprop="name" class="p-author h-card">{{ post.author }}</a>
-                        </span>
-                        {% else %}
-                        <span itemprop="name" class="p-author">
-                            {{ post.author }}
+    <div class="flex-wrapper">
+        <section class="news" aria-labeledby="news">
+            <div class="wrapper">
+                <h2 id="news">News</h2>
+                <ul>
+                    {% for post in site.posts limit: 5 %}
+                    <li class="h-entry">
+                        <h3 class="p-name">
+                            <a href="{{ post.url | absolute_url }}" class="u-url">
+                                {{ post.title | escape }}
+                            </a>
+                        </h3>
+                        <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%B %-d, %Y" }}
+                        </time>
+                        {% if post.author %}
+                        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                            {% if post.author_url %}
+                            <span>
+                                <a href="{{ post.author_url }}" rel="author" itemprop="name" class="p-author h-card">{{ post.author }}</a>
+                            </span>
+                            {% else %}
+                            <span itemprop="name" class="p-author">
+                                {{ post.author }}
+                            </span>
+                            {% endif %}
                         </span>
                         {% endif %}
-                    </span>
-                    {% endif %}
 
 
-                    {{ post.excerpt }}
-                </li>
-                {% endfor %}
-            </ul>
+                        {{ post.excerpt }}
+                    </li>
+                    {% endfor %}
+                </ul>
 
-            <a href="{{ '/news' | relative_url }}">All News &gt;</a>
-        </div>
-    </section>
+                <a href="{{ '/news' | relative_url }}">All News &gt;</a>
+            </div>
+        </section>
+    </div>
 </main>

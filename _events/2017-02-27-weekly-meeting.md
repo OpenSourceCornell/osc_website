@@ -18,9 +18,11 @@ external_url:
 
 Join us for our weekly meeting! This time, former club
 president
-[Patrick Niedzielski (broken link)][patrick]{:class="h-card"} will be
-discussing generic programming with iterators[^1], based on his CppCon
-2016 talk, [*From Zero to Iterators* (broken link)][iterators]
+[Patrick Niedzielski (broken link)][patrick]{:class="h-card"}{:data-proofer-ignore=""}
+will be discussing generic programming with iterators[^1], based on
+his CppCon 2016
+talk,
+[*From Zero to Iterators* (broken link)][iterators]{:data-proofer-ignore=""}
 ([slides][iterators-slides], [YouTube][iterators-youtube]). This
 presentation will be aimed at technical audiences, but won't require
 extensive C++ knowledge.

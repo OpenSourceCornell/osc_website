@@ -17,15 +17,16 @@ external_url:
 
 
 Join us for our weekly meeting! This time, former club
-president [Patrick Niedzielski][patrick]{:class="h-card"} will be
+president
+[Patrick Niedzielski (broken link)][patrick]{:class="h-card"} will be
 discussing generic programming with iterators[^1], based on his CppCon
-2016 talk, [*From Zero to Iterators*][iterators]
+2016 talk, [*From Zero to Iterators* (broken link)][iterators]
 ([slides][iterators-slides], [YouTube][iterators-youtube]). This
 presentation will be aimed at technical audiences, but won't require
 extensive C++ knowledge.
 
-[patrick]: https://pniedzielski.net/
-[iterators]: https://pniedzielski.net/speaking/#cppcon-2016-from-zero-to-iterators
+[patrick]: #
+[iterators]: #
 [iterators-slides]: https://raw.githubusercontent.com/CppCon/CppCon2016/master/Presentations/From%20Zero%20To%20Iterators/From%20Zero%20To%20Iterators%20-%20Patrick%20Niedzielski%20-%20CppCon%202016.pdf
 [iterators-youtube]: https://www.youtube.com/watch?v=N80hpts1SSk
 [^1]: these aren't your Java iterators[^2].

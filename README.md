@@ -7,7 +7,7 @@ the [OpenSourceCornell website](https://opensourcecornell.org).
 
 To run a development server:
 
-    bundle install
+    bundle install --path vendor/bundle
     bundle exec jekyll serve
 
 To run our tests:
